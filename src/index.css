@@ -11,3 +11,251 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.headerContainer{
+  width: 100%;
+  background-color: #0073fa;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header{
+  color: #ffffff;
+  font-family: Courier;
+  font-weight: bold;
+  font-size: 2.5rem;
+  width: 60%;
+  margin: auto;
+}
+
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ecf5ff;
+}
+
+.card{
+  min-width: 330px;
+  margin-bottom: 10px;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: white;
+  margin-top: 15px;
+}
+
+.card:hover {
+  background-color: rgb(218, 238, 255);
+  cursor: pointer;
+  z-index: 5;
+  color: #ffffff;
+}
+
+.cardSectionHeader{
+  background: #d0e5ff;
+  padding: 10px 5px;
+  font-size: 20px;
+  font-weight: 400;
+  color: blue;
+  text-align: center;
+}
+
+.cardSectionTime{
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: blue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cardSection{
+  color: blue;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.cardsContainer{
+  width: 60%
+}
+
+.detailContainer{
+  /* align-items: center; */
+  background-color: #ecf5ff;
+  min-height: 100vh;
+  padding-top: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.detailSectionContainerTitle{
+  font-size: '20px';
+  font-weight: 500;
+  background-color: #d0e5ff;
+  padding: 20px 10px;
+  color: #0073fa;
+}
+
+.deliveryAndPickupInfo{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detailContainerSection{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin-bottom: 20px;
+}
+
+.deliveryAndPickupInfoSection{
+  width: 49%;
+}
+
+.deliveryAndPickupMiddleSection{
+  width: 2%;
+}
+
+.otherInfo{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detailSectionContainer{
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.row{
+  display: flex;
+}
+
+.tableLeft{
+  width: 50%;
+  padding: 20px 10px;
+  color: blue;
+  font-weight: 400;
+}
+
+.tableRight{
+  width: 50%;
+  padding: 20px 0;
+  color: blue;
+  font-weight: 300;
+}
+
+.backButtonSection{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.backButton{
+  width: 100px;
+  height: 30px;
+  color: white;
+  margin-bottom: 20px;
+  background-color: #0073fa;;
+  border-radius: 10px;
+}
+
+.jobDetailsTitle{
+  font-size: 20px;
+  font-weight: bold;
+  color: #0073fa;;
+}
+
+@media screen and (max-width: 1138px) {
+  .cardsContainer {
+    width: 80%;
+  }
+
+  .header{
+    width: 80%;
+  }
+
+  .detailContainerSection{
+    width: 80%;
+  }
+
+  .backButtonSection{
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 862px) {
+  .cardsContainer {
+    width: 90%;
+  }
+
+  .card{
+    min-width: 300px;
+  }
+
+  .header{
+    width: 90%;
+  }
+
+  .detailContainerSection{
+    width: 90%;
+  }
+
+  .backButtonSection{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .card{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header{
+    font-size: 2rem;
+    width: 80%;
+  }
+  .detailContainerSection{
+    width: 80%;
+  }
+
+  .backButtonSection{
+    width: 80%;
+  }
+
+  .deliveryAndPickupInfoSection{
+    width: 100%
+  }
+
+  .deliveryAndPickupInfo{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .header{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header{
+    font-size: 1rem;
+  }
+  .card{
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .jobDetailsTitle{
+    font-size: 18px;
+  }
+}
