@@ -39,14 +39,17 @@ const initialData = {
 function Jobs() {
   const [data, setData] = React.useState<JobsDataType[]>([])
   const [details, setDetails] = React.useState(initialData)
+  const [loading, setLoading] = React.useState<boolean>(false)
 
   React.useEffect(() => {
-    handleData()
+    setLoading(true)
+    handleData().then(() => setLoading(false))
   }, [])
 
   const handleData = async () => {
     const data: JobsDataType[] = await getData();
-    return setData(data)
+    setData(data)
+    return data
   }
 
   const handleDetails = async (value: JobsDataType) => {
@@ -70,7 +73,8 @@ function Jobs() {
       }}
         className='cardsContainer'
       >
-        {details.id === 0 && data.length !== 0 && data.map((item: JobsDataType) => (
+        {loading && (<div>Loading ..............</div>)}
+        {!loading && details.id === 0 && data.length !== 0 && data.map((item: JobsDataType) => (
           <Card item={item} handleDetails={handleDetails} key={item.id} />
         ))}
       </div>
