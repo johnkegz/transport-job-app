@@ -1,6 +1,7 @@
 import React from 'react'
-import DetailTableSection from './components/DetailTableSection'
-import { JobDetailsDataType, DetailsType } from './types/dataTypes';
+import DetailsTile from '../components/DetailsTile';
+import DetailTableSection from '../components/DetailTableSection'
+import { JobDetailsDataType, DetailsType } from '../types/dataTypes';
 
 const JobDetails = (props: JobDetailsDataType) => {
     const formatDate: (value: string) => string = (value: string) => {
@@ -40,10 +41,7 @@ const JobDetails = (props: JobDetailsDataType) => {
         <div className='detailContainer'>
             <div className='backButtonSection'>
                 <div className='jobDetailsButton'><button className='backButton' onClick={() => props.handleBack()}>Back</button></div>
-                <div className='jobDetailsTitle'>
-                    Job #{props.item.id} details
-                </div>
-
+                <DetailsTile id={props.item.id}/>
             </div>
             <div className='detailContainerSection'>
                 <div className='deliveryAndPickupInfo'>
