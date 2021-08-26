@@ -7,8 +7,8 @@
 ## How to test and run the application
 
 - Clone the application `git clone https://github.com/johnkegz/brenger-app.git`
-- Cd into the application folder and install pacakages using `npm install`
-- Run the application using `npm run start`
+- Cd into the application folder and install pacakages using `yarn`
+- Run the application using `yarn start`
 - This will automatically open the browser or vist `http://localhost:3000/`
 
 ## About the application
