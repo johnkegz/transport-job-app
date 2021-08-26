@@ -24,3 +24,9 @@
 
 ## Technologies used
 - React and typescript
+## Jobs lists
+![image](https://user-images.githubusercontent.com/29975767/130888405-69296142-66c8-4392-8c5d-b277e3502177.png)
+## Details page
+![image](https://user-images.githubusercontent.com/29975767/130888473-0cf4235d-57cd-4e50-9ced-ec140be703e1.png)
+
+
