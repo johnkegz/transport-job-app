@@ -1,14 +1,15 @@
 import React from 'react'
 import DetailTableSection from './components/DetailTableSection'
+import { JobDetailsDataType, DetailsType } from './types/dataTypes';
 
-const JobDetails = (props: any) => {
-    const formatDate = (value: any) => {
-        return new Date(value).toLocaleString()
+const JobDetails = (props: JobDetailsDataType) => {
+    const formatDate: (value: string) => string = (value: string) => {
+        return new Date(value).toLocaleString();
     }
 
-    const createDetailsData = (keyData: any, value: any) => ({ key: keyData, parameter: value });
+    const createDetailsData: (key: string, parameter: string | number) => DetailsType = (key: string, parameter: string | number) => ({ key: key, parameter: parameter });
 
-    const deliveryData = [
+    const deliveryData: DetailsType[] = [
         createDetailsData('Administrative area', props.item.delivery_address.administrative_area),
         createDetailsData('Country code', props.item.delivery_address.country_code),
         createDetailsData('delivery address line 1', props.item.delivery_address.line_1),
@@ -18,7 +19,7 @@ const JobDetails = (props: any) => {
         createDetailsData('Delivery end date', formatDate(props.item.delivery.end)),
     ]
 
-    const pickupData = [
+    const pickupData: DetailsType[] = [
         createDetailsData('Administrative area', props.item.pickup_address.administrative_area),
         createDetailsData('Country code', props.item.pickup_address.country_code),
         createDetailsData('Delivery address line 1', props.item.pickup_address.line_1),
@@ -28,21 +29,21 @@ const JobDetails = (props: any) => {
         createDetailsData('Pick end date', formatDate(props.item.pickup.end)),
     ]
 
-    const amountData = [
+    const amountData: DetailsType[] = [
         createDetailsData('Amount', `${props.item.reward.amount} ${props.item.reward.currency}`),
     ]
 
-    const hh = [
+    const max_volumeData: DetailsType[] = [
         createDetailsData('max_volume_m3', props.item.max_volume_m3),
     ]
     return (
         <div className='detailContainer'>
             <div className='backButtonSection'>
-            <div className='jobDetailsButton'><button className='backButton' onClick={() => props.setDetails({})}>Back</button></div>
-            <div className='jobDetailsTitle'>
+                <div className='jobDetailsButton'><button className='backButton' onClick={() => props.handleBack()}>Back</button></div>
+                <div className='jobDetailsTitle'>
                     Job #{props.item.id} details
                 </div>
-                
+
             </div>
             <div className='detailContainerSection'>
                 <div className='deliveryAndPickupInfo'>
@@ -57,7 +58,7 @@ const JobDetails = (props: any) => {
                     </div>
                 </div>
                 <div className='otherInfo'>
-                    <DetailTableSection data={hh} title={'max_volume_m3'} />
+                    <DetailTableSection data={max_volumeData} title={'max_volume_m3'} />
                     <DetailTableSection data={amountData} title={'Reward'} />
                 </div>
             </div>

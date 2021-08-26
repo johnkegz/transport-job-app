@@ -1,6 +1,7 @@
 import React from 'react'
+import {CardDataType} from '../types/dataTypes';
 
-const Card = (props: any) => {
+const Card = (props: CardDataType) => {
     return (
         <div className='card' onClick={() => props.handleDetails(props.item)}>
             <div className="cardSectionHeader">Job #{props.item.id}</div>
