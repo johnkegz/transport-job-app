@@ -1,12 +1,12 @@
-# Brenger transportation jobs
+# Transportation jobs
 
 ## link to the hosted application
 - The application is deployed on netlify
-- [Brenger app link](https://wizardly-shannon-41990f.netlify.app)
+- [Transport job app link](https://wizardly-shannon-41990f.netlify.app)
 
 ## How to test and run the application
 
-- Clone the application `git clone https://github.com/johnkegz/brenger-app.git`
+- Clone the application `git clone https://github.com/johnkegz/transport-job-app.git`
 - Cd into the application folder and install pacakages using `yarn`
 - Run the application using `yarn start`
 - This will automatically open the browser or vist `http://localhost:3000/`
