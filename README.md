@@ -29,4 +29,5 @@
 ## Details page
 ![image](https://user-images.githubusercontent.com/29975767/130888473-0cf4235d-57cd-4e50-9ced-ec140be703e1.png)
 
-
+### To run using docker run 
+- `docker run --publish 3000:3000 react`
